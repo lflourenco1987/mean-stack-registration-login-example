@@ -1,0 +1,27 @@
+<div class="form-container">
+    <form method="post" style="margin-top: 30px">
+        <div class="form-group">
+            <label for="title">Pegunta</label>
+            <div class="input-group">
+                <input type="text" id="title" class="form-control" ng-model="vm.pergunta.titulo" />
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" ng-click="vm.salvar()">Adicionar</button>
+                </div>                    
+            </div>
+        </div>
+        
+    </form>
+
+    <div style="margin-top: 50px">
+        <h1>Perguntas</h1>
+        <div style="margin-top: 20px">
+            <div class="alert alert-default" style="border: 1px solid #ccc" ng-repeat="q in vm.perguntas">
+                    {{ q.titulo }}
+                <button type="button" ng-click="vm.excluir(this)" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+</div>
